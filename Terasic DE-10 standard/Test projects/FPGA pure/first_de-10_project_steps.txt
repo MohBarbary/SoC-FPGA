@@ -1,0 +1,45 @@
+1: Quartus
+2: New project wizard
+3: Name + location
+4: first_fpga_project
+5: empty projet
+6: add files later
+7: FAMILY: Cyclone V
+8: Cyclone V SX Extended Features
+9: 5CSXFC6D6F31C6
+10: EDA Tool settings none in all
+11: New: Design files - Block diagram
+12: Save
+13: New: Verilog file -> counter.v
+14: create a new symbol from file for your counter
+15: use it in the bdf file
+16: get PLL from the IP generator under clocks
+17: in the MEGAWIZ
+	*edit the reference frequency to your liking. We chose 50MHz from CLK0P on PIN-AF14
+	*output clock: 2MHz
+	*disable locked output
+18: get the pll block
+19: add 3 pins 1 o/p and 2 i/p
+20: attach them to the pll and counter
+21: top level is done!
+22: synthesize your design
+23: use the pin planner to assing your pins
+	*PIN_AF14 for CLK0P
+	*PIN_AA24 for led0	
+	*PIN_AJ4 for KEY0
+24: use the I/O standard 3.3-V LVTTL
+25: design, assignment, device, device and pins options, unused pins use "tristated" to avoid dim unused leds
+26: synthesize the design again. 
+27: make sure that your MSEL[4:0] is "10010"
+28: find your fpga then flash the .sof file on the fpga
+	
+You can make your FPGA file permanent on the EPCS by converting the .sof to .jic from the convert programming file
+in quartus.
+
+Configuration device: EPCS128
+Flash loader: add device 5CSXFC6D6F31C6
+Add sof data
+then generate
+
+when you try to load the .jic file the programmer tool will auto detect the EPCS128 unit and will give you the option
+to erase what is on it and program/configure the EPCS

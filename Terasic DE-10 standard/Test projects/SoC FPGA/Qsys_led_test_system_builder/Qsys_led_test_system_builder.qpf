@@ -1,0 +1,6 @@
+DATE = "11:38:30 March 17, 2022"
+QUARTUS_VERSION = "16.0.2"
+
+# Revisions
+
+PROJECT_REVISION = "Qsys_led_test_system_builder"
