@@ -294,7 +294,7 @@ hps u0 (
         .hps_io_hps_io_uart0_inst_RX       (HPS_UART_RX),       										     	  //       .hps_io_uart0_inst_RX
         .hps_io_hps_io_uart0_inst_TX       (HPS_UART_TX),      											        //       .hps_io_uart0_inst_TX
         .hps_io_hps_io_gpio_inst_GPIO35    (<connected-to-hps_io_hps_io_gpio_inst_GPIO35>), //       .hps_io_gpio_inst_GPIO35
-        .hps_io_gpio_inst_GPIO35.ledreg_external_connection_export (LEDR) 	                //        edreg_external_connection.export
+	.ledreg_external_connection_export (LEDR) 	                //        edreg_external_connection.export
     );
 ```
    12. Don't forget to replace "<connected-to-hps_io_hps_io_gpio_inst_GPIO35>" with HPS_ENET_INT_N.
