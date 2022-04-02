@@ -300,11 +300,13 @@ hps u0 (
    12. Don't forget to replace "<connected-to-hps_io_hps_io_gpio_inst_GPIO35>" with HPS_ENET_INT_N.
    13. Then from Quartus, Project -> Add/Remove files to project -> add the qsys file -> press OK.
    14.  Save and then Start Analysis & Elaboration (letting Quartus know about our HPS module and pin setups).
-      **Notice how Quartus inserts the interconnect that we left out:**
-	* Info (12250): Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave ledReg.s1 because the master is of type axi and the slave is of type avalon.
+   Notice how Quartus inserts the interconnect that we left out:
+```
+Info (12250): Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave ledReg.s1 because the master is of type axi and the slave is of type avalon.
+```
    15. Qsys also generates .Tcl files that help us to do the pin constraints found in tools -> tcl scripts -> hps -> submodules -> parameters.tcl (run) and pin_assignment (run).
    16. Compile and Synthesize the design. (Should take around 3~5 mins).
-   17. Your design won't fit in the device and the Synthesis process will fail, so you should go back and do step 29 again, but now Quartus knows what you are trying to do.
+   17. Your design won't fit in the device and the Synthesis process will fail, so you should go back and do step 15 again, but now Quartus knows what you are trying to do.
    18. Before compiling your design again go to assignments -> device.
    ### Important
 
