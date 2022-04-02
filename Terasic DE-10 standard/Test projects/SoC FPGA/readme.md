@@ -2,7 +2,7 @@
 
 The goal of this project is to be able to use the **SoC FPGA** capabilities of **Terasic's DE-10 Standard board** in order to create a quick **Platform designer** (formerly known as Qsys) component to program an 8 bit register **(Parallel I/O IP)** on the FPGA fabric as an **Avalon memory mapped slave**, then we will compile and build it using Quartus to extract the **.sof** and turn it into a compressed binary **.rbf** file to program the FPGA part of the board using the script **reconfigureFPGA** shell file that I have provided. Additionally, we will go over how to write a **C** code that would run on your **Hard processor system** (HPS) and how to compile the program successfully using the ARM GCC GNU compiler as well as how to transmit the files over to the DE-10.
 
-Special thanks to [Mr. Bo Gao](https://www.youtube.com/user/bskull3232"Mr. Bo Gao youtube channel") for his amazing tutorial series for the DE-10.
+Special thanks to [Mr. Bo Gao](https://www.youtube.com/user/bskull3232 "Mr. Bo Gao youtube channel") for his amazing tutorial series for the DE-10.
 
 Without further ado, let's get started! 
 
