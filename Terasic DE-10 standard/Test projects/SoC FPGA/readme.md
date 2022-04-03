@@ -9,16 +9,18 @@ Without further ado, let's get started!
 
 ## Dependencies
 
-1. [Quartus 18.1 lite (Windows)](https://www.intel.com/content/www/us/en/software-kit/664781/intel-quartus-prime-pro-edition-design-software-version-18-1-for-windows.html "Quartus 18.1 lite \(Windows\)")
-2. [SoC EDS shell 18.1 lite (Windows)](https://www.intel.com/content/www/us/en/software-kit/665461/intel-soc-fpga-embedded-development-suite-standard-edition-software-version-18-1-for-windows.html "SoC EDS shell 18.1 lite \(Windows\)") 
+1. [Quartus 18.1 lite (Windows)](https://www.intel.com/content/www/us/en/software-kit/665990/intel-quartus-prime-lite-edition-design-software-version-18-1-for-windows.html "Quartus 18.1 lite \(Windows\)")
+2. [SoC EDS shell 18.1 standard (Windows)](https://www.intel.com/content/www/us/en/software-kit/665461/intel-soc-fpga-embedded-development-suite-standard-edition-software-version-18-1-for-windows.html "SoC EDS shell 18.1 lite \(Windows\)") 
 
 3. [Terasic DE10-Standard console linux](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=1081&PartNo=4 "Terasic DE10-Standard console linux")
 
 4. [Terasic DE10-Standard System Builder](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=1081&PartNo=4 "Terasic DE10-Standard System Builder")
 
-5. Windows subsystem linux (Optional)
+5. [Cyclone V device support](https://www.intel.com/content/www/us/en/software-kit/665990/intel-quartus-prime-lite-edition-design-software-version-18-1-for-windows.html "Cyclone V device support")
 
-6. Putty or any other terminal app
+6. Windows subsystem linux (Optional)
+
+7. Putty or any other terminal app
 
 
 ## Running the Linux kernel
@@ -228,9 +230,12 @@ This part is going to be a little bit tedious, because Quartus validates every s
 * Connect the CLK reset to the reset of the ledReg.
 * Connect the CLK to the peripheral.
 * Connect the Slave port "s1" to the master port of the main processor "h2f_lw_axi_master".
+
 **Note: the AXI bus and the Avalon memory mapped bus are connected through the pipelined Avalon interconnect bridge, so we can add it or we can just compile and Qsys will add the bridge converters needed and handle the rest.**
+
 * Export the external_connection by double clicking on export (Conduit signal)
 7. Generate the HDL files
+
 **Note: notice that the avalon_st_adapter: "mn_interconnect_0" has been added**
 
 8. We want to add the generated HDL block into our top level design. 
